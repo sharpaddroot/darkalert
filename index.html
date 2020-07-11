@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>NAVy | DarkAlert</title>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<script src="assets/js/sweetalert.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<style> 
+		body {font-family: Kanit;background-color: #e9ecef;}
+        .highlight {
+            background-color: #f8f8f8;
+            padding: 10px 23px;
+            font-size: 14px;
+            line-height: normal;
+            color: rgba(0,0,0,0.62);
+            overflow-x: auto;
+        }
+        .code_text{color:blue;}
+        .code_command{color:crimson;}
+	</style>
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid bg-dark text-white">
+    <div class="container">
+        <div class="media">
+            <h1 class="display-4 mr-3"><i class="fas fa-code"></i></h1>
+            <div class="media-body">
+              <h1 class="mt-0 display-4">DARK Sweetalert</h1>
+              <p class="lead">DarkAlert Style By NAVy DESIGn. <font style="font-size:0.8rem;">(Original Alert By sweetalert.js.org)</font></p>
+              <a href="#configuration"><button type="button" class="btn btn-sm btn-primary">Configuration</button></a>
+              <a href="#methods"><button type="button" class="btn btn-sm btn-success">Methods</button></a>
+              <a href="#theming"><button type="button" class="btn btn-sm btn-danger">Theming</button></a>
+              <button type="button" id="facebook" class="btn btn-sm btn-primary"><i class="fab fa-facebook-square"></i> Facebook ผู้พัฒนา</button>
+            </div>
+          </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="card bg-transparent border-0 mb-5">
+        <h2 class="card-header bg-transparent border-dark"><font class="text-dark">#</font> Install</h2>
+        <div class="card-body pl-5 pr-5 pt-3 pb-3">
+
+            <h5>ไฟล์จะอยู่ใน <font class="text-info">assets/js/sweetalert.min.js</font></h5></br>
+            เรียกใช้ได้โดยการ
+            <div class="highlight mt-2">
+                <code>&lt;link rel="stylesheet" type="text/css" href="dist/sweetalert.css"&gt;</code></br>
+                <code>&lt;script src="assets/js/sweetalert.min.js">&lt;/script&gt;</code>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="configuration" class="card bg-transparent border-0">
+        <h2 class="card-header bg-transparent border-dark"><font class="text-primary">#</font> Configuration</h2>
+        <div class="card-body pl-5 pr-5 pt-3 pb-3">
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> text</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;text: <font class="code_text">"Hello world!"</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_text" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> title</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;title: <font class="code_text">"Here's a title!"</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_title" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> icon</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;icon: <font class="code_text">"success"</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_success" type="button" class="btn btn-success"><i class="fas fa-play"></i> success</button>
+                <button id="p_warning" type="button" class="btn btn-warning"><i class="fas fa-play"></i> warning</button>
+                <button id="p_error" type="button" class="btn btn-danger"><i class="fas fa-play"></i> error</button>
+                <button id="p_info" type="button" class="btn btn-info"><i class="fas fa-play"></i> info</button>
+            </div>
+
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> button</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;button: <font class="code_text">"Coolio"</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-3">
+                <button id="p_button" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>(<font class="code_text">"Hello world!"</font>,{</br>
+                    &nbsp;&nbsp;&nbsp;button: <font class="code_text">false</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_button_f" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> buttons</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;buttons: [<font class="code_text">"Stop"</font>,<font class="code_text">"Do it!"</font>],</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-3">
+                <button id="p_buttons" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;buttons: [<font class="code_text">true</font>,<font class="code_text">"Do it!"</font>],</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-3">
+                <button id="p_buttons_t" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;buttons: {</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cancel: <font class="code_text">true</font>,</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confirm: <font class="code_text">"Confirm"</font>,</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;roll: {</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: <font class="code_text">"Do a barrell roll!"</font>,</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: <font class="code_text">"roll"</font>,</br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>
+                    &nbsp;&nbsp;&nbsp;},</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_buttons_r" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+            
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> content</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;content: <font class="code_text">"input"</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-3">
+                <button id="p_content" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                        &nbsp;&nbsp;&nbsp;content: {</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element: <font class="code_text">"input"</font>,</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attributes: {</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder: <font class="code_text">"Type your password"</font>,</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type: <font class="code_text">"password"</font>,</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</br>
+                        &nbsp;&nbsp;&nbsp;},</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_content_p" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+            
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> closeOnClickOutside</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;closeOnClickOutside: <font class="code_text">false</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_closeOnClickOutside" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> closeOnEsc</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>({</br>
+                    &nbsp;&nbsp;&nbsp;closeOnEsc: <font class="code_text">false</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_closeOnEsc" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+
+            <span class="badge badge-primary" style="font-size:1rem;"><i class="fas fa-angle-right"></i> timer</span>
+            <div class="highlight mt-2">
+                <font class="code_command">swal</font>(<font class="code_text">"This modal will disappear soon!"</font>,{</br>
+                    &nbsp;&nbsp;&nbsp;buttons: <font class="code_text">false</font>,</br>
+                    &nbsp;&nbsp;&nbsp;timer: <font class="code_text">3000</font>,</br>
+                  });
+            </div>
+            <div class="text-center mt-2 mb-5">
+                <button id="p_timer" type="button" class="btn btn-dark"><i class="fas fa-play"></i> Preview</button>
+            </div>
+
+        </div>
+      </div>
+
+
+
+    <div id="methods" class="card bg-transparent border-0">
+        <h2 class="card-header bg-transparent border-dark"><font class="text-success">#</font> Methods</h2>
+        <div class="card-body pl-5 pr-5 pt-3 pb-3">
+
+            <table class="table table-hover mb-5">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                      <th class="text-primary" scope="row">close</th>
+                      <td>Closes the currently open SweetAlert, as if you pressed the cancel button.</td>
+                      <td><span class="alert alert-danger pt-0 pb-0 m-0" role="alert">swal.close()</span></td>
+                    </tr>
+
+                    
+                    <tr>
+                        <th class="text-primary" scope="row">getState</th>
+                        <td>	Get the state of the current SweetAlert modal.</td>
+                        <td><span class="alert alert-danger pt-0 pb-0 m-0" role="alert">swal.getState()</span></td>
+                      </tr>
+
+                      <tr>
+                        <th class="text-primary" scope="row">setActionValue</th>
+                        <td>Change the promised value of one of the modal's buttons. You can either pass in just a string (by default it changes the value of the confirm button), or an object.</td>
+                        <td><span class="alert alert-danger pt-0 pb-0 m-0" role="alert">swal.setActionValue({ confirm: 'Text from input' })</span></td>
+                      </tr>
+
+                      <tr>
+                        <th class="text-primary" scope="row">stopLoading</th>
+                        <td>Removes all loading states on the modal's buttons. Use it in combination with the button option <span class="alert alert-danger pt-0 pb-0 m-0" role="alert">closeModal: false</span> .</td>
+                        <td><span class="alert alert-danger pt-0 pb-0 m-0" role="alert">swal.stopLoading()</span></td>
+                      </tr>
+
+                </tbody>
+            </table>
+        
+        </div>
+    </div>
+
+    <div id="theming" class="card bg-transparent border-0 mb-5">
+        <h2 class="card-header bg-transparent border-dark"><font class="text-danger">#</font> Theming</h2>
+        <div class="card-body pl-5 pr-5 pt-3 pb-3">
+
+            <h5>การปรับแต่งเพิ่มเติมสามารถอ่านเพิ่มเติมได้ที่ <a href="https://sweetalert.js.org/docs/#theming" target="_blank">sweetalert.js.org</a></h5>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+$('#p_text').click(function(){swal({text: "Hello world!",});});
+$('#p_title').click(function(){swal({title: "Here's a title!",});});
+$('#p_success').click(function(){swal({icon: "success",});});
+$('#p_warning').click(function(){swal({icon: "warning",});});
+$('#p_error').click(function(){swal({icon: "error",});});
+$('#p_info').click(function(){swal({icon: "info",});});
+$('#p_button').click(function(){swal({button: "Coolio",});});
+$('#p_button_f').click(function(){swal("Hello world!", {button: false,});});
+$('#p_buttons').click(function(){swal({buttons: ["Stop", "Do it!"],});});
+$('#p_buttons_t').click(function(){swal({buttons: [true, "Do it!"],});});
+$('#p_buttons_r').click(function(){swal({buttons: {cancel: true,confirm: "Confirm",roll: {text: "Do a barrell roll!",value: "roll",},},});});
+$('#p_content').click(function(){swal({content: "input",});});
+$('#p_content_p').click(function(){swal({content: {element: "input",attributes: {placeholder: "Type your password",type: "password",},},});});
+$('#p_closeOnClickOutside').click(function(){swal({closeOnClickOutside: false,});});
+$('#p_closeOnEsc').click(function(){swal({closeOnEsc: false,});});
+$('#p_timer').click(function(){swal("This modal will disappear soon!", {buttons: false,timer: 3000,});});
+$('#facebook').click(function(){swal("NAVy DESIGn", "ระบบกำลังพาท่านไปที่ Facebook...", "success",{button:false,closeOnClickOutside:false,timer: 3000,}); setTimeout(function(){window.open("https://www.facebook.com/nanydesignpage/");}, 2000);});
+
+});
+</script>
+</body>
+</html>
